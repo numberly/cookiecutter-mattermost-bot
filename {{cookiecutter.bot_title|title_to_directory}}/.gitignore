@@ -1,0 +1,7 @@
+*~
+#*#
+*.pyc
+__pycache__/
+*.py[cod]
+*.swp
+.venv/

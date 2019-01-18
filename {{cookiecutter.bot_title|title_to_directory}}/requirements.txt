@@ -1,0 +1,2 @@
+marshmallow==2.18.0
+sanic==18.12.0
