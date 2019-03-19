@@ -19,8 +19,8 @@ Generate a new bot:
    $ cookiecutter https://gitlab.1000mercis.com/namespace/cookiecutter-mattermost-bot
 
 To create the project, you will need:
+
 - a token that you will get at the end of the creation process of a Mattermost slash command
 - a Git repository URL you will get after creating a Git repository
 
-Once all questions have been answered, check the ``README.rst`` file of your newly generated application to
-learn how to run it.
+Once all questions have been answered, check the ``README.rst`` file of your newly generated application to learn how to run it.
