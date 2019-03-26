@@ -1,15 +1,7 @@
 {
-    "bot_title": "My Bot",
-    "app_description": "{{cookiecutter.bot_title}} allows users to interact with an external service from a Mattermost slash command.",
-    "bot_directory": "{{cookiecutter.bot_title|title_to_directory}}",
+    "bot_name": "my-bot",
+    "app_description": "my-bot allows users to interact with an external service from a Mattermost slash command.",
     "mattermost_token": "",
-    "use_kubernetes": "y",
-    "bot_url": "",
-    "git_repository_url": "",
-    "registry_url": "",
-    "_extensions": ["helpers.HelpersExtension"],
-    "_environment": {
-        "lstrip_blocks": true,
-        "trim_blocks": true
-    }
+    "bot_url": "my-bot.my-domain.com",
+    "registry_url": "hub.docker.com/username/my-bot"
 }

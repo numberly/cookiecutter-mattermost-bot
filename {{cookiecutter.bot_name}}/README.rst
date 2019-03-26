@@ -4,9 +4,9 @@
 .. _Sanic: https://sanic.readthedocs.io/en/latest/
 .. _Docker installation guide: https://docs.docker.com/install/
 
-{{ "=" * cookiecutter.bot_title | length }}
-{{cookiecutter.bot_title}}
-{{ "=" * cookiecutter.bot_title | length }}
+{{ "=" * cookiecutter.bot_name | length }}
+{{cookiecutter.bot_name}}
+{{ "=" * cookiecutter.bot_name | length }}
 
 Description
 ===========
@@ -24,13 +24,7 @@ Installation
 
 To install this application, you have to:
 
-1. clone this git repository
-
-.. code-block:: bash
-
-    $ git clone {{cookiecutter.git_repository_url}} {{cookiecutter.bot_directory}}
-    $ cd {{cookiecutter.bot_directory}}
-
+1. clone this repository
 2. create and activate a virtualenv_
 
 .. code-block:: bash

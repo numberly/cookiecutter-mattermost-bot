@@ -6,11 +6,11 @@ Reference template from which you can generate a boilerplate bot for Mattermost.
 Usage
 -----
 
-Install dependencies:
+Install Cookiecutter:
 
 .. code-block:: bash
 
-   $ pip install --user -r requirements.txt
+   $ pip install --user cookiecutter
 
 Generate a new bot:
 
