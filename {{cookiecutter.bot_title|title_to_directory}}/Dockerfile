@@ -3,7 +3,7 @@ FROM python:3.7 AS build
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY {{cookiecutter.bot_directory}} {{cookiecutter.bot_directory}}
+COPY bot bot
 COPY run.py .
 
 FROM python:3.7-slim
