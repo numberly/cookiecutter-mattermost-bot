@@ -6,7 +6,7 @@ from marshmallow.validate import Equal, Length
 from sanic import Blueprint, response
 from sanic.exceptions import abort
 
-from {{cookiecutter.bot_directory}}.settings import MATTERMOST_BOT_TOKEN
+from bot.settings import MATTERMOST_BOT_TOKEN
 
 
 bot = Blueprint("bot", url_prefix="/bot")
