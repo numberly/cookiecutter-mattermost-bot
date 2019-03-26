@@ -3,8 +3,8 @@
 import os
 import sys
 
-from {{cookiecutter.bot_directory}}.app import app
-from {{cookiecutter.bot_directory}}.settings import MATTERMOST_BOT_TOKEN
+from bot.app import app
+from bot.settings import MATTERMOST_BOT_TOKEN
 
 if __name__ == "__main__":
 
