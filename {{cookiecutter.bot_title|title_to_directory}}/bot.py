@@ -1,4 +1,5 @@
 import logging
+import os
 
 from marshmallow import Schema
 from marshmallow.fields import String
@@ -6,14 +7,17 @@ from marshmallow.validate import Equal, Length
 from sanic import Blueprint, Sanic, response
 from sanic.exceptions import abort
 
-from bot.settings import MATTERMOST_BOT_TOKEN
-
 logging.basicConfig(
     level=logging.INFO, format='[%(asctime)s] [%(levelname)s] %(message)s')
 
 app = Sanic(__name__)
 bot = Blueprint("bot")
 app.blueprint(bot)
+
+
+# the Mattermost token or tokens generated when you created your slash webhook
+MATTERMOST_BOT_TOKEN = os.environ.get('MATTERMOST_BOT_TOKEN',
+                                      '{{cookiecutter.mattermost_token}}')
 
 
 class BotSchema(Schema):

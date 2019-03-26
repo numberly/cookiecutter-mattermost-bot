@@ -3,8 +3,6 @@
     "app_description": "{{cookiecutter.bot_title}} allows users to interact with an external service from a Mattermost slash command.",
     "bot_directory": "{{cookiecutter.bot_title|title_to_directory}}",
     "mattermost_token": "",
-    "bot_user_name": "mattermost-bot",
-    "bot_icon_url": "http://via.placeholder.com",
     "use_kubernetes": "y",
     "bot_url": "",
     "git_repository_url": "",

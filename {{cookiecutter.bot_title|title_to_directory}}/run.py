@@ -3,8 +3,7 @@
 import os
 import sys
 
-from bot.app import app
-from bot.settings import MATTERMOST_BOT_TOKEN
+from bot import MATTERMOST_BOT_TOKEN
 
 if __name__ == "__main__":
 
