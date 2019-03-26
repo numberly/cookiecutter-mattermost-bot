@@ -16,7 +16,7 @@ Generate a new bot:
 
 .. code-block:: bash
 
-   $ cookiecutter https://gitlab.1000mercis.com/namespace/cookiecutter-mattermost-bot
+   $ cookiecutter https://github.com/numberly/cookiecutter-mattermost-bot
 
 To create the project, you will need:
 
