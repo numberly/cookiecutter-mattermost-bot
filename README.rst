@@ -1,3 +1,5 @@
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+
 cookiecutter-mattermost-bot
 ===========================
 
@@ -6,7 +8,7 @@ cookiecutter-mattermost-bot
 Usage
 -----
 
-Install Cookiecutter:
+Install Cookiecutter_:
 
 .. code-block:: bash
 
