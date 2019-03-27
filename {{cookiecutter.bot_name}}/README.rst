@@ -2,7 +2,6 @@
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _virtualenv: https://virtualenv.pypa.io/en/stable/
 .. _Sanic: https://sanic.readthedocs.io/en/latest/
-.. _Docker installation guide: https://docs.docker.com/install/
 
 {{ "=" * cookiecutter.bot_name | length }}
 {{cookiecutter.bot_name}}
@@ -47,9 +46,38 @@ You should now be able to run it with:
 You should have been given the ``MATTERMOST_BOT_TOKEN`` by Mattermost at the
 end of your slash command creation process.
 
-Docker
-======
+Build
+=====
 
-This project can be run in a Docker container using the provided dockerfile.
-To run it, Docker Engine is required.
-Procedure to install Docker can be found here: `Docker installation guide`_.
+Build the Docker image with:
+
+.. code-block:: bash
+
+    $ docker build -t {{cookiecutter.bot_registry_url}} .
+
+You can try the Docker image on your own machine with:
+
+.. code-block:: bash
+
+    $ docker run --rm -i -p 5000:5000 -e MATTERMOST_BOT_TOKEN=... {{cookiecutter.bot_registry_url}}
+
+Deployment
+==========
+
+Push your Docker image to the Docker registry with:
+
+.. code-block:: bash
+
+    $ docker push {{cookiecutter.bot_registry_url}}
+
+Create the Kubernetes secret that will contain the Mattermost token:
+
+.. code-block:: bash
+
+    $ kubectl create secret generic {{cookiecutter.bot_name}} --from-literal=mattermost-token=...
+
+Deploy the manifest:
+
+.. code-block:: bash
+
+    $ kubectl apply -f kubernetes.yaml
