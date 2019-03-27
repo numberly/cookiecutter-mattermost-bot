@@ -6,10 +6,13 @@ from marshmallow.validate import Equal, Length
 from sanic import Sanic, response
 from sanic.exceptions import abort
 
-app = Sanic(__name__)
-
 # the Mattermost token or tokens generated when you created your slash webhook
 MATTERMOST_BOT_TOKEN = os.environ.get('MATTERMOST_BOT_TOKEN')
+if not MATTERMOST_BOT_TOKEN:
+    exit("MATTERMOST_BOT_TOKEN must be set. "
+         "Please see README.rst for instructions")
+
+app = Sanic(__name__)
 
 
 class BotSchema(Schema):
@@ -35,3 +38,9 @@ async def post(request):
     message = "Retour du bot: {} from @{}".format(schema.data['text'],
                                                   schema.data['user_name'])
     return response.json({"text": message})
+
+
+if __name__ == "__main__":
+    port = os.environ.get('PORT', 5000)
+    host = os.environ.get('HOST', '0.0.0.0')
+    app.run(host=host, port=int(port), auto_reload=True)
