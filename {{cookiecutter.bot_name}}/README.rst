@@ -10,7 +10,7 @@
 
 Description
 ===========
-{{cookiecutter.app_description}}
+{{cookiecutter.bot_description}}
 
 This project leverages the Sanic_ asynchronous framework in a Mattermost bot context.
 

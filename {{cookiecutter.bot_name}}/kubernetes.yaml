@@ -18,7 +18,7 @@ spec:
         runAsUser: 65534 # nobody
       containers:
       - name: {{cookiecutter.bot_name}}
-        image: {{cookiecutter.registry_url}}
+        image: {{cookiecutter.bot_image_url}}
         env:
         - name: MATTERMOST_BOT_TOKEN
           valueFrom:
