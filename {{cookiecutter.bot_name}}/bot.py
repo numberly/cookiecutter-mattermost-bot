@@ -1,4 +1,3 @@
-import logging
 import os
 
 from marshmallow import Schema
@@ -6,9 +5,6 @@ from marshmallow.fields import String
 from marshmallow.validate import Equal, Length
 from sanic import Sanic, response
 from sanic.exceptions import abort
-
-logging.basicConfig(
-    level=logging.INFO, format='[%(asctime)s] [%(levelname)s] %(message)s')
 
 app = Sanic(__name__)
 
