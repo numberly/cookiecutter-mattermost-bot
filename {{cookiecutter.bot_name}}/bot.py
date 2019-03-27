@@ -4,16 +4,13 @@ import os
 from marshmallow import Schema
 from marshmallow.fields import String
 from marshmallow.validate import Equal, Length
-from sanic import Blueprint, Sanic, response
+from sanic import Sanic, response
 from sanic.exceptions import abort
 
 logging.basicConfig(
     level=logging.INFO, format='[%(asctime)s] [%(levelname)s] %(message)s')
 
 app = Sanic(__name__)
-bot = Blueprint("bot")
-app.blueprint(bot)
-
 
 # the Mattermost token or tokens generated when you created your slash webhook
 MATTERMOST_BOT_TOKEN = os.environ.get('MATTERMOST_BOT_TOKEN')
@@ -25,12 +22,12 @@ class BotSchema(Schema):
     user_name = String(validate=Length(min=2), required=True)
 
 
-@bot.route('/', methods=['GET'])
+@app.route('/', methods=['GET'])
 async def get(request):
     return response.text('Hello there! You might want to POST on this URL.')
 
 
-@bot.route('/', methods=['POST'])
+@app.route('/', methods=['POST'])
 async def post(request):
     """
     Mattermost new post event handler
