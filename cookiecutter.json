@@ -1,6 +1,6 @@
 {
     "bot_name": "my-bot",
-    "bot_description": "my-bot allows users to interact with an external service from a Mattermost slash command.",
+    "bot_description": "``my-bot`` replies to Mattermost users.",
     "bot_url": "my-bot.my-domain.com",
     "bot_image_url": "hub.docker.com/username/my-bot"
 }
