@@ -24,3 +24,8 @@ To create the project, you will need:
 - the URL on which the bot's Docker image will be hosted.
 
 Once all questions have been answered, check the ``README.rst`` file of your newly generated application to learn how to run it.
+
+License
+-------
+
+MIT
