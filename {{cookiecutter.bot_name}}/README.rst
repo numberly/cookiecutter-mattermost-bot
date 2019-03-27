@@ -1,53 +1,49 @@
+.. _cookiecutter-mattermost-bot: https://github.com/numberly/cookiecutter-mattermost-bot
 .. _pip: https://pip.pypa.io/en/stable/quickstart/
-.. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _virtualenv: https://virtualenv.pypa.io/en/stable/
 .. _Sanic: https://sanic.readthedocs.io/en/latest/
+.. _slash command creation process: https://docs.mattermost.com/developer/slash-commands.html#custom-slash-command
 
 {{ "=" * cookiecutter.bot_name | length }}
 {{cookiecutter.bot_name}}
 {{ "=" * cookiecutter.bot_name | length }}
 
-Description
-===========
 {{cookiecutter.bot_description}}
 
-This project leverages the Sanic_ asynchronous framework in a Mattermost bot context.
+This repository has been generated with cookiecutter-mattermost-bot_.
 
-Prerequisites
-=============
+Quickstart
+==========
 
-- Python 3.7
+To install and run this application locally without Docker, you will need
+Python 3.7 and virtualenv_.
 
-Installation
-============
-
-To install this application, you have to:
-
-1. clone this repository
-2. create and activate a virtualenv_
+Once you have cloned the repository, create and activate a virtualenv_:
 
 .. code-block:: bash
 
+    $ cd {{cookiecutter.bot_name}}
     $ virtualenv -p python3.7 .venv
     $ .venv/bin/activate
 
-3. install the application requirements with pip_
+Install the application requirements with pip_:
 
 .. code-block:: bash
 
     (.venv) $ pip install -r requirements.txt
 
-You should now be able to run it with:
+You should now be able to run the bot with:
 
 .. code-block:: bash
 
     (.venv) $ MATTERMOST_BOT_TOKEN=... python bot.py
 
-You should have been given the ``MATTERMOST_BOT_TOKEN`` by Mattermost at the
-end of your slash command creation process.
+The ``MATTERMOST_BOT_TOKEN`` environment variable is required and should have
+been given to you by Mattermost at the end of your `slash command creation
+process`_.
 
-Build
-=====
+Docker
+======
 
 Build the Docker image with:
 
@@ -55,16 +51,16 @@ Build the Docker image with:
 
     $ docker build -t {{cookiecutter.bot_registry_url}} .
 
-You can try the Docker image on your own machine with:
+You should now be able to run the bot with:
 
 .. code-block:: bash
 
     $ docker run --rm -i -p 5000:5000 -e MATTERMOST_BOT_TOKEN=... {{cookiecutter.bot_registry_url}}
 
-Deployment
+Kubernetes
 ==========
 
-Push your Docker image to the Docker registry with:
+Push the Docker image to the Docker registry with:
 
 .. code-block:: bash
 
