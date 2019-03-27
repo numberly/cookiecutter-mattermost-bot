@@ -19,6 +19,12 @@ spec:
       containers:
       - name: {{cookiecutter.bot_name}}
         image: {{cookiecutter.registry_url}}
+        env:
+        - name: MATTERMOST_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: {{cookiecutter.bot_name}}
+              key: mattermost-token
         ports:
         - containerPort: 5000
         resources:
