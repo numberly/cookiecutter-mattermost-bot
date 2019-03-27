@@ -54,7 +54,7 @@ metadata:
     kubernetes.io/tls-acme: "true"
 spec:
   rules:
-  - host: {{cookiecutter.bot_url}}
+  - host: {{cookiecutter.bot_kubernetes_host}}
     http:
       paths:
         - backend:
@@ -62,6 +62,6 @@ spec:
             servicePort: 80
   tls:
   - hosts:
-      - {{cookiecutter.bot_url}}
+      - {{cookiecutter.bot_kubernetes_host}}
     secretName: tls-{{cookiecutter.bot_name}}
 
