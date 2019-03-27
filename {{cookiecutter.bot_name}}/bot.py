@@ -35,7 +35,7 @@ async def post(request):
     if schema.errors:
         abort(400, schema.errors)
 
-    message = "Retour du bot: {} from @{}".format(schema.data['text'],
+    message = "I received \"{}\" from @{}".format(schema.data['text'],
                                                   schema.data['user_name'])
     return response.json({"text": message})
 
