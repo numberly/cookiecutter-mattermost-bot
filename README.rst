@@ -1,7 +1,7 @@
 cookiecutter-mattermost-bot
 ===========================
 
-Reference template from which you can generate a boilerplate bot for Mattermost.
+🍪 Bootstrap Kubernetes-ready asynchronous Python 3.7 Mattermost bots.
 
 Usage
 -----
