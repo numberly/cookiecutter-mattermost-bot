@@ -49,13 +49,13 @@ Build the Docker image with:
 
 .. code-block:: bash
 
-    $ docker build -t {{cookiecutter.bot_registry_url}} .
+    $ docker build -t {{cookiecutter.bot_image_url}} .
 
 You should now be able to run the bot with:
 
 .. code-block:: bash
 
-    $ docker run --rm -i -p 5000:5000 -e MATTERMOST_BOT_TOKEN=... {{cookiecutter.bot_registry_url}}
+    $ docker run --rm -i -p 5000:5000 -e MATTERMOST_BOT_TOKEN=... {{cookiecutter.bot_image_url}}
 
 Kubernetes
 ==========
@@ -64,7 +64,7 @@ Push the Docker image to the Docker registry with:
 
 .. code-block:: bash
 
-    $ docker push {{cookiecutter.bot_registry_url}}
+    $ docker push {{cookiecutter.bot_image_url}}
 
 Create the Kubernetes secret that will contain the Mattermost token:
 
