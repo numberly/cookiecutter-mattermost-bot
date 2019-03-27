@@ -20,7 +20,7 @@ Generate a new bot:
 
 To create the project, you will need:
 
-- a token that you will get at the end of the creation process of a Mattermost slash command
-- a Git repository URL you will get after creating a Git repository
+- a hostname for the bot, that your Kubernetes setup can control,
+- the URL on which the bot's Docker image will be hosted.
 
 Once all questions have been answered, check the ``README.rst`` file of your newly generated application to learn how to run it.
