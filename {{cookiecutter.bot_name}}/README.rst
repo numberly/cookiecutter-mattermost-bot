@@ -42,7 +42,10 @@ You should now be able to run it with:
 
 .. code-block:: bash
 
-    (.venv) $ python run.py
+    (.venv) $ MATTERMOST_BOT_TOKEN=... python run.py
+
+You should have been given the ``MATTERMOST_BOT_TOKEN`` by Mattermost at the
+end of your slash command creation process.
 
 Docker
 ======

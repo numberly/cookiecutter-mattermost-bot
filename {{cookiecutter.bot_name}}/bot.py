@@ -16,8 +16,7 @@ app.blueprint(bot)
 
 
 # the Mattermost token or tokens generated when you created your slash webhook
-MATTERMOST_BOT_TOKEN = os.environ.get('MATTERMOST_BOT_TOKEN',
-                                      '{{cookiecutter.mattermost_token}}')
+MATTERMOST_BOT_TOKEN = os.environ.get('MATTERMOST_BOT_TOKEN')
 
 
 class BotSchema(Schema):
