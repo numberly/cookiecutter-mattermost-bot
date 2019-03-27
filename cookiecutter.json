@@ -1,7 +1,6 @@
 {
     "bot_name": "my-bot",
     "app_description": "my-bot allows users to interact with an external service from a Mattermost slash command.",
-    "mattermost_token": "",
     "bot_url": "my-bot.my-domain.com",
     "registry_url": "hub.docker.com/username/my-bot"
 }
