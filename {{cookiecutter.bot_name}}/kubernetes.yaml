@@ -57,11 +57,10 @@ spec:
   - host: {{cookiecutter.bot_kubernetes_host}}
     http:
       paths:
-        - backend:
-            serviceName: {{cookiecutter.bot_name}}
-            servicePort: 80
+      - backend:
+          serviceName: {{cookiecutter.bot_name}}
+          servicePort: 80
   tls:
   - hosts:
-      - {{cookiecutter.bot_kubernetes_host}}
+    - {{cookiecutter.bot_kubernetes_host}}
     secretName: tls-{{cookiecutter.bot_name}}
-
